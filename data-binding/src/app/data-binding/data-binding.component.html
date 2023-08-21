@@ -1,21 +1,23 @@
-<section class="property-binding">
-  <!-- <article>
+<!-- <section class="property-binding">
+  <article>
     <h3>Interpolação</h3>
     <p>String renderizada com interpolação: {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
     <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
-    <p>Curso Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+    <p>
+      Curso Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}
+    </p>
     <p></p>
   </article>
 
   <article>
     <h3>Property Binding</h3>
-    <img src="{{ urlImagem }}">
-    <br>
-    <img [src]="urlImagem">
-  </article> -->
+    <img src="{{ urlImagem }}" />
+    <br />
+    <img [src]="urlImagem" />
+  </article>
 
-  <!-- <article>
+  <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
@@ -67,9 +69,9 @@
         Esse texto só vai aparecer em caso de erro
       </div>
     </div>
-  </article> -->
+  </article>
 
-  <!-- <article>
+  <article>
     <h3>Event binding</h3>
     <div>
       <button (click)="clickButton()" class="btn btn-primary">
@@ -98,7 +100,7 @@
         >Passe o mouse sobre mim!</span
       >
     </div>
-  </article> -->
+  </article>
 
   <article>
     <h3>Two-way data binding</h3>
@@ -126,5 +128,18 @@
       <input type="text" [(ngModel)]="pessoa.nome" />
       <input type="text" [(ngModel)]="pessoa.idade" />
     </div>
+  </article>
+</section> -->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+
+    <app-curso [nome]="nomeCurso"></app-curso>
+
+    <contador
+      [valor]="valorInicial"
+      (mudouValor)="onMudouValor($event)"
+    ></contador>
   </article>
 </section>
